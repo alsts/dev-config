@@ -4,6 +4,7 @@
 vim.keymap.set("x", "p", [["_dP]])
 vim.keymap.set({ "n", "v" }, "y", '"+y')
 vim.keymap.set("n", "Y", '"+Y')
+vim.keymap.set("i", "jj", "<Esc>", { desc = "Escape insert mode" })
 
 for _, mode in ipairs({ "n", "i", "v" }) do
   vim.keymap.set(mode, "<ScrollWheelUp>", "<C-Y>", { silent = true })
