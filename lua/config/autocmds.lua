@@ -7,6 +7,15 @@
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
+vim.api.nvim_create_autocmd("TextYankPost", {
+  group = vim.api.nvim_create_augroup("user_yank_to_clipboard", { clear = true }),
+  callback = function()
+    if vim.v.event.operator == "y" then
+      vim.fn.setreg("+", vim.fn.getreg('"'))
+    end
+  end,
+})
+
 vim.api.nvim_create_autocmd({ "InsertLeave", "FocusLost", "BufLeave" }, {
   group = vim.api.nvim_create_augroup("user_autosave", { clear = true }),
   callback = function(args)

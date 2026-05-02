@@ -4,6 +4,7 @@ return {
   priority = 1000,
   config = function()
     require("monokai-pro").setup({
+      filter = "ristretto",
       background_clear = {},
       override = function(c)
         return {
@@ -13,7 +14,7 @@ return {
           MiniFilesBorderModified = { bg = c.editor.background, fg = c.base.red },
           MiniFilesTitle = { bg = c.editor.background, fg = c.base.dimmed3 },
           MiniFilesTitleFocused = { bg = c.editor.background, fg = c.base.yellow, bold = true },
-          MiniFilesCursorLine = { bg = c.base.dimmed2 },
+          MiniFilesCursorLine = { bg = "#1a1a1a" },
           MiniFilesDirectory = { fg = c.base.blue, bg = c.editor.background },
           MiniFilesFile = { fg = c.base.white, bg = c.editor.background },
 
@@ -49,6 +50,14 @@ return {
           GitSignsAdd = { fg = "#57ab5a", bg = "NONE" },
           GitSignsChange = { fg = "#daaa3f", bg = "NONE" },
           GitSignsDelete = { fg = "#f47067", bg = "NONE" },
+
+          SnacksPickerDir = { fg = c.sideBar.foreground, bg = c.sideBar.background },
+          SnacksPickerFile = { fg = c.sideBar.foreground, bg = c.sideBar.background },
+          SnacksPickerPathHidden = { fg = "#ffd866", bg = c.sideBar.background },
+          SnacksPickerPathIgnored = { fg = "#908e8f", bg = c.sideBar.background },
+          SnacksPickerListCursorLine = { bg = "#1a1a1a" },
+          SnacksPickerList = { bg = c.sideBar.background },
+          SnacksPickerListItem = { bg = c.sideBar.background },
         }
       end,
     })

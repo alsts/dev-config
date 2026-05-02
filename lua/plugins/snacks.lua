@@ -11,11 +11,20 @@ return {
     vim.api.nvim_set_hl(0, "SnacksPickerPathIgnored", { fg = "#908e8f" })
   end,
   opts = {
+    dashboard = {
+      preset = {
+        header = "",
+      },
+    },
     picker = {
+      hidden = true,
+      ignored = true,
+      exclude = { "node_modules", ".git", "dist", "build", ".next", ".turbo", ".cache", "coverage" },
       sources = {
-        explorer = {
-          hidden = true,
-        },
+        explorer = { hidden = true, ignored = true },
+        files = { hidden = true, ignored = true },
+        grep = { hidden = true, ignored = true },
+        smart = { hidden = true, ignored = true },
       },
     },
     lazygit = {
