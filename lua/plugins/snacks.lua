@@ -19,7 +19,22 @@ return {
     picker = {
       hidden = true,
       ignored = true,
-      exclude = { "node_modules", ".git", "dist", "build", ".next", ".turbo", ".cache", "coverage" },
+      exclude = {
+        "node_modules",
+        ".git",
+        "dist",
+        "build",
+        ".next",
+        ".turbo",
+        ".cache",
+        "coverage",
+        ".worktrees",
+        ".claude",
+        "package-lock.json",
+        "pnpm-lock.yaml",
+        "yarn.lock",
+        "bun.lockb",
+      },
       sources = {
         explorer = { hidden = true, ignored = true },
         files = { hidden = true, ignored = true },

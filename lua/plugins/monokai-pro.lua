@@ -14,7 +14,7 @@ return {
           MiniFilesBorderModified = { bg = c.editor.background, fg = c.base.red },
           MiniFilesTitle = { bg = c.editor.background, fg = c.base.dimmed3 },
           MiniFilesTitleFocused = { bg = c.editor.background, fg = c.base.yellow, bold = true },
-          MiniFilesCursorLine = { bg = "#1a1a1a" },
+          MiniFilesCursorLine = { bg = "#3a3833" },
           MiniFilesDirectory = { fg = c.base.blue, bg = c.editor.background },
           MiniFilesFile = { fg = c.base.white, bg = c.editor.background },
 
@@ -55,7 +55,7 @@ return {
           SnacksPickerFile = { fg = c.sideBar.foreground, bg = c.sideBar.background },
           SnacksPickerPathHidden = { fg = "#ffd866", bg = c.sideBar.background },
           SnacksPickerPathIgnored = { fg = "#908e8f", bg = c.sideBar.background },
-          SnacksPickerListCursorLine = { bg = "#1a1a1a" },
+          SnacksPickerListCursorLine = { bg = "#3a3833" },
           SnacksPickerList = { bg = c.sideBar.background },
           SnacksPickerListItem = { bg = c.sideBar.background },
         }

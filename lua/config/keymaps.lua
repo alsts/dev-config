@@ -25,6 +25,12 @@ local function yank_path(modifier, label)
   end
 end
 
+vim.keymap.set("n", "<leader>gR", function()
+  vim.cmd("checktime")
+  vim.cmd("silent! LspRestart")
+  vim.notify("Project Refreshed", vim.log.levels.INFO)
+end, { desc = "Git: Reload Files & LSP" })
+
 vim.keymap.set("n", "<leader>yp", yank_path("p", "absolute path"), { desc = "Yank absolute path" })
 vim.keymap.set("n", "<leader>yr", yank_path("", "relative path"), { desc = "Yank relative path" })
 vim.keymap.set("n", "<leader>yn", yank_path("t", "filename"), { desc = "Yank filename" })
